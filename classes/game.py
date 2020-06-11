@@ -39,6 +39,7 @@ class pet():
         k=random.randrange(1,self.level)
         self.tiredness+=k
         self.dirtiness+=k
+        self.hunger+=k
 
     def sleeping(self):
         self.tiredness=0
@@ -51,7 +52,13 @@ class pet():
             self.dirtiness=0
         k=random.randrange(0,self.level)
         self.tiredness+=k
-        if self.tiredness>10:
-            self.status="sleep"
+
+    def collect_food(self):
+        self.food_forage+=4
+        k=random.randrange(0,self.level)
+        self.tiredness+=k
+        self.dirtiness+=k
+        self.hunger+=k
+
 
 
